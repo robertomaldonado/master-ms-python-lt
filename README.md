@@ -14,6 +14,30 @@ gestion el manejo de sesiones de usuario, las cuales se usaran durante todo el f
 El sistema tambien debera de emitir eventos de sobre las ordenes las cuales deberan ser notificadas a un sistema externo
 para ser procesadas.
 
+#### roblemas a resolver
+
+- Gestion de usuarios
+- Gestion de sessiones
+- Notificaciones de ordenes
+- Gestion de ordenes
+
+##### Actions para gestionar usuarios - CRUD (Create Read Update Delete)
+
+- buscar usuario
+- agregar usuario
+- actualizar usuario
+- listar usuarios
+- Borrar usuario (soft delete)
+
+- permisos de usuario (opcional) - ACL (Access Control List)
+
+#### Generaquia de aquitecturas
+- DDD
+- CQRS
+- Hexagonal
+- Layers
+
+
 ### Tecnologias
 
 - Python >=3.12
