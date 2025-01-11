@@ -26,3 +26,14 @@ class PaginationMetadata(BaseModel):
 class ListUserResponse(BaseModel):
     data: List[UserResponse]
     meta: PaginationMetadata
+
+
+class UpdateUserRequest(BaseModel):
+    email: Optional[AnyStr] = None
+    username: Optional[AnyStr] = None
+    app_version: Optional[AnyStr] = None
+
+
+class DeleteUserResponse(BaseModel):
+    id: int
+    message: AnyStr
