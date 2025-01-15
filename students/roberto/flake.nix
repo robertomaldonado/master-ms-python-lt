@@ -16,9 +16,7 @@
           buildInputs = with pkgs; [
             python313
             uv
-
-            # Dependencias de psychopg2
-            openssl
+            openssl # pyschopg2 deps (driver de conexion)
             postgresql # to obtain libpq-dev
           ];
         };
