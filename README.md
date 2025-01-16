@@ -32,11 +32,11 @@ para ser procesadas.
 - permisos de usuario (opcional) - ACL (Access Control List)
 
 #### Generaquia de aquitecturas
+
 - DDD
 - CQRS
 - Hexagonal
 - Layers
-
 
 ### Tecnologias
 
