@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-
+from .handlers.create_user import CreateUserRequest, CreateUserResponse, create_user
 # <recurso>/{id}/<sub-recurso>/{sub-id}
 
 router = APIRouter()
@@ -11,11 +11,8 @@ def health():
 
 
 @router.post("/")
-def create_user_route():
-  # User info
-  return {
-      "message": "User created"
-  }
+def create_user_route(request: CreateUserRequest) -> CreateUserResponse:
+  return create_user(request)
 
 
 @router.put("/{id}")
