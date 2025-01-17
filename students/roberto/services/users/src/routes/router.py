@@ -3,6 +3,8 @@ from .handlers.create_user import CreateUserRequest, CreateUserResponse, create_
 from .handlers.update_user import UpdateUserRequest, UpdateUserResponse, update_user
 from .handlers.delete_user import DeleteUserResponse, delete_user
 from .handlers.get_user import GetUserResponse, get_user
+from .handlers.list_users import ListUsersResponse, list_users
+
 
 router = APIRouter()
 
@@ -28,10 +30,8 @@ def get_user_route(id: int) -> GetUserResponse:
 
 
 @router.get("/")
-def list_users_route() -> list:
-  return [
-      {"id": 456}
-  ]
+def list_users_route() -> ListUsersResponse:
+  return list_users()
 
 
 @router.delete("/{id}")
