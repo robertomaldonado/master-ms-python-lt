@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends
-from .handlers.create_user import CreateUserRequest, CreateUserResponse, create_user
+from .handlers.create_user import create_user
 from .handlers.update_user import UpdateUserRequest, UpdateUserResponse, update_user
 from .handlers.delete_user import DeleteUserResponse, delete_user
 from .handlers.get_user import GetUserResponse, get_user
 from .handlers.list_users import ListUsersResponse, list_users
-
+from .handlers.dtos import CreateUserRequest, UserResponse
 
 router = APIRouter()
 
@@ -15,7 +15,7 @@ def health():
 
 
 @router.post("/")
-def create_user_route(request: CreateUserRequest) -> CreateUserResponse:
+def create_user_route(request: CreateUserRequest) -> UserResponse:
   return create_user(request)
 
 

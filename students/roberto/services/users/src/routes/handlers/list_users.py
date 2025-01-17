@@ -1,25 +1,16 @@
-from pydantic import BaseModel
-from typing import List, Dict
 
-
-class PaginationMetadata(BaseModel):
-  total: int
-  page: int
-  limit: int
-
-
-class ListUsersResponse(BaseModel):
-  data: List[Dict]
-  meta: PaginationMetadata
+from .dtos import ListUsersResponse, PaginationMetadata, UserResponse
 
 
 def list_users() -> ListUsersResponse:
   return ListUsersResponse(
       data=[
-          {
-              "id": 1,
-              "email": "yhour@email.com"
-          }
+          UserResponse(
+              id=1,
+              email="t@t.c",
+              username="Test",
+              app_version="v0.0"
+          )
       ],
       meta=PaginationMetadata(
           total=1,

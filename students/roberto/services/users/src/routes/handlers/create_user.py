@@ -1,23 +1,8 @@
-from pydantic import BaseModel
-from typing import Optional, AnyStr
+from .dtos import CreateUserRequest, UserResponse
 
 
-class CreateUserRequest(BaseModel):
-  email: AnyStr
-  password: AnyStr
-  username: AnyStr
-  app_version: Optional[AnyStr] = None
-
-
-class CreateUserResponse(BaseModel):
-  id: int
-  email: AnyStr
-  username: AnyStr
-  app_version: Optional[AnyStr] = None
-
-
-def create_user(request: CreateUserRequest) -> CreateUserResponse:
-  return CreateUserResponse(
+def create_user(request: CreateUserRequest) -> UserResponse:
+  return UserResponse(
       id=1,
       email=request.email,
       username=request.username,
