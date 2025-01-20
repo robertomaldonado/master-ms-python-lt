@@ -1,13 +1,4 @@
-from pydantic import BaseModel
-
-
-class DeleteUserRequest(BaseModel):
-  id: int
-
-
-class DeleteUserResponse(BaseModel):
-  id: int
-  isDeleted: bool
+from .dtos import DeleteUserRequest, DeleteUserResponse
 
 
 def delete_user(request: DeleteUserRequest) -> DeleteUserResponse:

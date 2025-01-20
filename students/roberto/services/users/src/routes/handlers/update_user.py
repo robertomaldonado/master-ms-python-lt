@@ -1,23 +1,8 @@
-from pydantic import BaseModel
-from typing import Optional, AnyStr
+from .dtos import UserResponse, UpdateUserRequest
 
 
-class UpdateUserRequest(BaseModel):
-  email: AnyStr
-  password: AnyStr
-  username: AnyStr
-  app_version: Optional[AnyStr] = None
-
-
-class UpdateUserResponse(BaseModel):
-  id: int
-  email: AnyStr
-  username: AnyStr
-  app_version: Optional[AnyStr] = None
-
-
-def update_user(request: UpdateUserRequest) -> UpdateUserResponse:
-  return UpdateUserResponse(
+def update_user(request: UpdateUserRequest) -> UserResponse:
+  return UserResponse(
       id=1,
       email=request.email,
       username=request.username,
