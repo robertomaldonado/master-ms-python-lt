@@ -14,7 +14,7 @@ gestion el manejo de sesiones de usuario, las cuales se usaran durante todo el f
 El sistema tambien debera de emitir eventos de sobre las ordenes las cuales deberan ser notificadas a un sistema externo
 para ser procesadas.
 
-#### roblemas a resolver
+#### Problemas a resolver
 
 - Gestion de usuarios
 - Gestion de sessiones
