@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from .handlers.create_user import create_user
-from .handlers.update_user import UpdateUserRequest, UpdateUserResponse, update_user
+from .handlers.update_user import UpdateUserRequest, update_user
 from .handlers.delete_user import DeleteUserResponse, delete_user
-from .handlers.get_user import GetUserResponse, get_user
+from .handlers.get_user import get_user
 from .handlers.list_users import ListUsersResponse, list_users
 from .handlers.dtos import CreateUserRequest, UserResponse
 
@@ -20,12 +20,12 @@ def create_user_route(request: CreateUserRequest) -> UserResponse:
 
 
 @router.put("/{id}")
-def update_user_route(request: UpdateUserRequest) -> UpdateUserResponse:
+def update_user_route(request: UpdateUserRequest) -> UserResponse:
   return update_user(request)
 
 
 @router.get("/{id}")
-def get_user_route(id: int) -> GetUserResponse:
+def get_user_route(id: int) -> UserResponse:
   return get_user(id)
 
 
