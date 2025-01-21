@@ -1,0 +1,9 @@
+POSTGRES_URL: postgresql://root:root@servidor.com:5432/postgres
+
+REDIS_HOST: redis.com
+REDIS_PORT: 6379
+REDIS_DB: 0
+
+JWT_SECRET: "16371e04-9f54-45c2-b79f-c44fc6ba682b"
+
+API_KEY: "6bb1de99-6499-4ab0-a9be-5bf823108134"
