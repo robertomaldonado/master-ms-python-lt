@@ -175,6 +175,10 @@ cython_debug/
 .idea/
 .vscode/
 
+## MacOs
+
+.DS_Store
+
 ### Docker
 
 data/
