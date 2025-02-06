@@ -1,0 +1,10 @@
+POSTGRES_URL: postgresql://root:root@servidor.com:5432/postgres
+
+REDIS_HOST: redis.com
+REDIS_PORT: 6379
+REDIS_DB: 0
+
+API_KEY: "asdhsdfkjasdsa"
+
+SESSIONS_API_URL: "http://some-domain.com"
+SESSIONS_API_KEY: "local-key"

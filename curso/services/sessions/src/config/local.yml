@@ -1,0 +1,12 @@
+POSTGRES_URL: postgresql://root:root@db_sessions:5432/postgres
+
+REDIS_HOST: cache_sessions
+REDIS_PORT: 6379
+REDIS_DB: 0
+
+JWT_SECRET: secret
+
+API_KEY: "local-key"
+
+LOGSTASH_HOST: "logstash"
+LOGSTASH_PORT: 5000

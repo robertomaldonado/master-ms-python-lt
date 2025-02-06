@@ -1,0 +1,13 @@
+POSTGRES_URL: postgresql://root:root@db_users:5432/postgres
+
+REDIS_HOST: cache_users
+REDIS_PORT: 6379
+REDIS_DB: 0
+
+API_KEY: "local-key"
+
+SESSIONS_API_URL: "http://traefik:80/sessions"
+SESSIONS_API_KEY: "local-key"
+
+LOGSTASH_HOST: "logstash"
+LOGSTASH_PORT: 5000
