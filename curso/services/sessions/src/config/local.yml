@@ -10,3 +10,5 @@ API_KEY: "local-key"
 
 LOGSTASH_HOST: "logstash"
 LOGSTASH_PORT: 5000
+
+OTEL_COLLECTOR_URL: "http://otel-collector:4317"

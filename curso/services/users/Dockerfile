@@ -17,8 +17,6 @@ RUN pip install uv
 RUN uv pip compile pyproject.toml -o requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN chmod +x scripts/start.sh
-
 # Exponer el puerto que FastAPI usará
 EXPOSE 8000
 

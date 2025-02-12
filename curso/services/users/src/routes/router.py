@@ -21,11 +21,6 @@ router = APIRouter()
 prefix = envs.get("PATH_PREFIX", "")
 
 
-@router.get(path(".health", prefix))
-def health():
-    return {"status": "ok"}
-
-
 @router.post(path("/", prefix))
 def create_user_route(request: CreateUserRequest, controller: UsersController = Depends(provide_users_controller)) -> UserResponse:
     return controller.create(request)

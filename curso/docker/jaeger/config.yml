@@ -1,0 +1,13 @@
+jaeger_storage:
+  backends:
+    some_trace_storage:
+
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  batch:

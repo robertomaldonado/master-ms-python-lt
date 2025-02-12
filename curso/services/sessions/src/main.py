@@ -1,18 +1,19 @@
 from fastapi import FastAPI, Request
 
 from src.routes.router import router
-from src.infra.middlewares.api_key import api_key
-from src.infra.middlewares.log_request import log_request
+from src.infra.environment import envs
+from src.infra.otel import instrument_app
+from src.infra.middlewares.api_key import APIKeyMiddleware
+from src.infra.middlewares.log_request import LogRequestMiddleware
+from src.infra.middlewares.metrics import MetricsMiddleware
 
 app = FastAPI()
+instrument_app(app)
 
-@app.middleware("http")
-async def log_request_mdlw(req: Request, next):
-    return await log_request(req, next)
+app.add_middleware(LogRequestMiddleware)
+app.add_middleware(APIKeyMiddleware)
+app.add_middleware(MetricsMiddleware)
 
-@app.middleware("http")
-async def verify_api_key(request: Request, call_next):
-    return await api_key(request, call_next)
-
+prefix = envs.get("PATH_PREFIX", "")
 
 app.include_router(router)

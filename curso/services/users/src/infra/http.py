@@ -1,4 +1,3 @@
-from .logger import log
 
 def remove_prefix(text, prefix):
     if text.startswith(prefix):
